@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, sharpImageService } from "astro/config";
 
 // https://astro.build/config
 import tailwind from "@astrojs/tailwind";
@@ -10,6 +10,9 @@ import react from "@astrojs/react";
 export default defineConfig({
   experimental: { assets: true },
   site: "https://sitegoeshere.com",
+  image: {
+    service: sharpImageService(),
+  },
   integrations: [
     tailwind({
       config: {
