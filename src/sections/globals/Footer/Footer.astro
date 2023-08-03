@@ -3,6 +3,8 @@ import { socials } from "@data/general";
 import { hours } from "@data/general";
 import { contacts } from "@data/general";
 import { Icon } from "astro-icon";
+
+const date = new Date();
 ---
 
 <section class="py-10 px-edge">
@@ -60,9 +62,8 @@ import { Icon } from "astro-icon";
   </footer>
   <div class="bg-primary-darker py-4">
     <p class="text-center text-xl">
-      Copyright © 2022 Website Name | All Right Reserved | Powered By <a
-        href="https://www.simply-sprout.com">Simply Sprout</a
-      >
+      Copyright © {date.getFullYear()} Website Name | All Rights Reserved | Powered
+      By <a href="https://www.simply-sprout.com">Simply Sprout</a>
     </p>
   </div>
 </section>
