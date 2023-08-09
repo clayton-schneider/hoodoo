@@ -1,0 +1,72 @@
+---
+import { Image } from "astro:assets";
+import codySperry from "~/assets/pages/about/team/cody-sperry.png";
+import tylerHodge from "~/assets/pages/about/team/tyler-hodge.png";
+
+const featuredPress = [
+  {
+    title: "The Best Barbecue In CT",
+    date: "August 24th, 2022",
+    source: "Food & Wine Magazine",
+    link: "https://www.gooogle.com",
+    img: {
+      src: codySperry,
+      alt: "cody sperry of hoodoo brown",
+    },
+  },
+  {
+    title: "The Best Barbecue In CT",
+    date: "August 24th, 2022",
+    source: "Food & Wine Magazine",
+    link: "https://www.gooogle.com",
+    img: {
+      src: codySperry,
+      alt: "cody sperry of hoodoo brown",
+    },
+  },
+  {
+    title: "The Best Barbecue In CT",
+    date: "August 24th, 2022",
+    source: "Food & Wine Magazine",
+    link: "https://www.gooogle.com",
+    img: {
+      src: codySperry,
+      alt: "cody sperry of hoodoo brown",
+    },
+  },
+];
+---
+
+<section class="bg-primary-lighter px-edge py-10 lg:py-20 relative">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="text-center max-w-xl mx-auto">
+      <h2 class="font-bebas text-white text-5xl">Featured Press Articles</h2>
+    </div>
+    <div
+      class="mt-10 grid gap-10 grid-cols-1 lg:grid-cols-3 place-items-center"
+    >
+      {
+        featuredPress.map((article) => (
+          <div class="relative w-full max-w-[350px]">
+            <Image
+              class="w-full max-h-[200px] object-cover"
+              src={article.img.src}
+              alt={article.img.alt}
+            />
+            <div class="mt-4">
+              <p class="font-bebas text-3xl text-white">{article.title}</p>
+              <p class="mt-2 text-white">{article.date}</p>
+              <p class="mt-2 font-bold text-accent">{article.source}</p>
+              <a
+                href={article.link}
+                class="mt-2 py-4 px-8 border border-cta text-white font-bold text-lg text-center block"
+              >
+                Read The Article
+              </a>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
