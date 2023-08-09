@@ -1,19 +1,17 @@
 ---
-import { Icon } from "astro-icon";
+import { Image } from "astro:assets";
+import logo from "~/assets/hoodoo-brown-logo.png";
 // Import components
 import NavMenu from "./NavMenu";
 const links = [
   { linkText: "Home", link: "/" },
-  { linkText: "About", link: "/about" },
+  { linkText: "About Us", link: "/about" },
   {
-    linkText: "Services",
-    link: "/services",
-    sublinks: [
-      { linkText: "Service One", link: "/services/service-one" },
-      { linkText: "Service Two", link: "/services/service-two" },
-      { linkText: "Service Three", link: "/services/service-three" },
-    ],
+    linkText: "Press",
+    link: "/press",
   },
+  { linkText: "Food & Drinks", link: "/menu" },
+  { linkText: "Catering", link: "/catering" },
   { linkText: "Contact", link: "/contact" },
 ];
 
@@ -23,9 +21,19 @@ interface Props {
 const { className } = Astro.props;
 ---
 
-<header class={(className ? className : "") + " px-edge relative"}>
-  <div class="mx-auto flex max-w-screen-2xl items-center justify-between py-4">
-    <a href="/"><Icon name="logo" width="158" height="60" /></a>
+<header class={(className ? className : "") + " bg-primary px-edge relative"}>
+  <div
+    class="mx-auto flex md:flex-col gap-9 max-w-screen-2xl items-center justify-between py-10"
+  >
+    <a href="/"
+      ><Image
+        quality={100}
+        loading="eager"
+        height={120}
+        src={logo}
+        alt="hoodoo brown logo"
+      /></a
+    >
 
     <NavMenu links={links} client:load />
   </div>

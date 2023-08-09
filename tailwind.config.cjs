@@ -23,9 +23,10 @@ module.exports = {
         bebas: ["Bebas Neue", ...FONT_FAMILY_BASE],
       },
       colors: {
-        primary: "#00C24E",
-        "text-light": "#FFFFFF",
-        "text-dark": "#000000",
+        primary: "#342E2D",
+        accent: "#EFCA52",
+        cta: "#D24F35",
+        "text-light": "#FDF5DD",
       },
       padding: {
         edge: "2.5%",
