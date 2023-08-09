@@ -18,6 +18,10 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Raleway", ...FONT_FAMILY_BASE],
+        bebas: ["Bebas Neue", ...FONT_FAMILY_BASE],
+      },
       colors: {
         primary: "#00C24E",
         "text-light": "#FFFFFF",
