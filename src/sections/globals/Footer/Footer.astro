@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import logo from "~/assets/hoodoo-brown-logo-no-bg.png";
+
 import { socials } from "@data/general";
 import { hours } from "@data/general";
 import { contacts } from "@data/general";
@@ -7,23 +10,27 @@ import { Icon } from "astro-icon";
 const date = new Date();
 ---
 
-<section class="py-10 px-edge">
+<section class="bg-primary-darker text-white py-10 px-edge">
   <footer>
     <div
       class="mx-auto flex flex-col text-center lg:text-left gap-10 items-center lg:flex-row lg:items-start max-w-screen-2xl justify-between"
     >
       <div class="max-w-sm mx-auto lg:mx-0">
-        <Icon name="logo" width="158" height="60" class="mx-auto lg:mx-0" />
+        <Image height={100} src={logo} alt="hoodoo brown logo" />
         <p class="mt-2 text-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum non ab
-          exercitationem veritatis, labore nobis ipsa officiis magnam sequi,
-          iusto asperiores.
+          Classic Texas-style barbecue, craft beer & cocktails offered in a
+          casual space with Old West decor.
         </p>
         <div class="mt-6 flex justify-center lg:justify-start space-x-2">
           {
             socials.map((social) => (
               <a href={social.link}>
-                <Icon name={social.icon} size={30} color="black" />
+                <Icon
+                  class="hover:text-accent transition-all duration-300"
+                  name={social.icon}
+                  size={30}
+                  color="white"
+                />
               </a>
             ))
           }
@@ -46,11 +53,20 @@ const date = new Date();
       </div>
 
       <div>
+        <p class="font-bold text-lg">Orders Taken Until</p>
+        <ul>
+          <li>8:30pm T-Thu</li>
+          <li>9pm Fr</li>
+          <li>7:30pm Su</li>
+        </ul>
+      </div>
+
+      <div>
         <p class="font-bold text-lg">Contact Us</p>
-        <ul class="mt-2">
+        <ul class="mt-2 space-y-2 max-w-xs">
           {
             contacts.map((contact) => (
-              <li class="flex space-x-2 justify-center lg:justify-start">
+              <li class="flex space-x-2 justify-center items-center lg:justify-start">
                 <Icon name={contact.icon} size={30} />
                 <p>{contact.text}</p>
               </li>
@@ -60,9 +76,9 @@ const date = new Date();
       </div>
     </div>
   </footer>
-  <div class="bg-primary-darker py-4">
-    <p class="text-center text-xl">
-      Copyright © {date.getFullYear()} Website Name | All Rights Reserved | Powered
+  <div class="mt-2">
+    <p class="text-center">
+      Copyright © {date.getFullYear()} Hoodoo Brown BBQ | All Rights Reserved | Powered
       By <a href="https://www.simply-sprout.com">Simply Sprout</a>
     </p>
   </div>

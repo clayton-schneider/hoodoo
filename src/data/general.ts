@@ -1,30 +1,34 @@
 export const socials = [
-  { name: "facebook", icon: "mdi:facebook", link: "https://www.facebook.com/" },
+  {
+    name: "facebook",
+    icon: "mdi:facebook",
+    link: "https://www.facebook.com/HoodooBrownBBQ/",
+  },
 
   {
     name: "instagram",
     icon: "mdi:instagram",
-    link: "https://www.instagram.com/",
+    link: "http://www.instagram.com/hoodoobrownbbq",
   },
-  { name: "youtube", icon: "mdi:youtube", link: "https://www.youtube.com/" },
+  {
+    name: "twitter",
+    icon: "mdi:twitter",
+    link: "https://twitter.com/HoodooBrownBBQ",
+  },
 ];
 
 export const hours = [
-  { day: "Monday", open: "9:00", close: "5:00" },
-  { day: "Tuesday", open: "9:00", close: "5:00" },
-  { day: "Wednesday", open: "9:00", close: "5:00" },
-  { day: "Thursday", open: "9:00", close: "5:00" },
-  { day: "Friday", open: "9:00", close: "5:00" },
-  { day: "Saturday", open: "9:00", close: "5:00" },
-  { day: "Sunday", open: "9:00", close: "5:00" },
+  { day: "T-Th", open: "4pm", close: "9pm" },
+  { day: "F-Sa", open: "11:30am", close: "10pm" },
+  { day: "Su", open: "11:30am", close: "8pm" },
 ];
 
 export const contacts = [
   {
     name: "Address",
-    text: "1 Main Street, Boston, MA 02134",
+    text: "967 Ethan Allen Highway Ridgefield, CT 06877",
     icon: "mdi:pin",
   },
-  { name: "Email", text: "contact@website.com", icon: "mdi:email" },
-  { name: "Phone", text: "800-000-000", icon: "mdi:phone" },
+  { name: "Email", text: "hoodoobrownbbq@gmail.com", icon: "mdi:email" },
+  { name: "Phone", text: "(203) 438-6033", icon: "mdi:phone" },
 ];
