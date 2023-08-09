@@ -1,0 +1,65 @@
+---
+import { Image } from "astro:assets";
+import codySperry from "~/assets/pages/about/team/cody-sperry.png";
+import tylerHodge from "~/assets/pages/about/team/tyler-hodge.png";
+
+const teamMembers = [
+  {
+    name: "Cody Sperry",
+    text: "It’s his passion, his kindness, and humor that makes Hoodoo what it is. But beyond all that it’s his work ethic, and love of barbecue that shines through in every conversation you have with him.",
+    img: {
+      src: codySperry,
+      alt: "cody sperry of hoodoo brown",
+    },
+  },
+  {
+    name: "Tyler Hodge",
+    text: "Sausage is Tyler’s specialty. So much so that it has earned him the title of “The Sausage King of Connecticut”.",
+    img: {
+      src: tylerHodge,
+      alt: "tyler hodge of hoodoo brown",
+    },
+  },
+  {
+    name: "Other Members Here",
+    text: "Here Goes Other Members",
+    img: {
+      src: codySperry,
+      alt: "cody sperry of hoodoo brown",
+    },
+  },
+];
+---
+
+<section class="bg-bg-light px-edge py-10 lg:py-20 relative">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="text-center max-w-xl mx-auto">
+      <h2 class="font-bebas text-cta text-5xl">Meet The Team</h2>
+      <p class="font-bold text-2xl">
+        We dare you to try find a group <span class="text-cta">hoo</span> cares more
+        about barbecue
+      </p>
+    </div>
+    <div
+      class="mt-10 grid gap-10 grid-cols-1 lg:grid-cols-3 place-items-center"
+    >
+      {
+        teamMembers.map((member) => (
+          <div class="relative w-full max-w-[400px] h-[450px] flex lg:block flex-col justify-end p-6">
+            <Image
+              class="absolute w-full h-full inset-0 object-cover"
+              src={member.img.src}
+              alt={member.img.alt}
+            />
+            <div class="sm:mt-0 lg:mt-[150px] xl:mt-[225px] relative">
+              <p class="font-bebas text-2xl text-accent">{member.name}</p>
+              <p class="text-lg font-semibold leading-relaxed text-white">
+                {member.text}
+              </p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

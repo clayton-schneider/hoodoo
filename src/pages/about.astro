@@ -2,7 +2,9 @@
 import { Image } from "astro:assets";
 import aboutHero from "~/assets/pages/about/about-hero.png";
 import bbqLights from "~/assets/pages/about/bbq-lights.png";
+
 import Layout from "../layouts/Layout.astro";
+import Team from "@sections/about/Team.astro";
 ---
 
 <Layout
@@ -84,4 +86,6 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </section>
+
+  <Team />
 </Layout>

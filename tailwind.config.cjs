@@ -27,6 +27,7 @@ module.exports = {
         accent: "#EFCA52",
         cta: "#D24F35",
         "text-light": "#FDF5DD",
+        "bg-light": "#F7F5FB",
       },
       padding: {
         edge: "2.5%",
