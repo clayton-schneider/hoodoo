@@ -1,16 +1,87 @@
 ---
+import { Image } from "astro:assets";
+import aboutHero from "~/assets/pages/about/about-hero.png";
+import bbqLights from "~/assets/pages/about/bbq-lights.png";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
   seo={{
-    title: "About Us | Simply Sprout Starter",
+    title: "About Us | Hoodoo Brown",
     description: "The starter template for all Simply Sprout websites.",
   }}
 >
-  <section class="px-edge py-10 lg:py-20">
-    <div class="max-w-screen-xl mx-auto">
-      <h1>Hi</h1>
+  <section
+    class="px-edge py-10 min-h-[650px] lg:py-20 relative flex flex-col justify-center items-center"
+  >
+    <Image
+      class="absolute h-full w-full inset-0 object-cover object-right"
+      src={aboutHero}
+      alt="hoodoo brown building"
+      quality={100}
+      loading="eager"
+    />
+    <div class="relative text-center z-10 max-w-4xl mx-auto">
+      <p class="max-w-md mx-auto font-bebas text-6xl text-white">
+        Outlaw Barbecue At Its Finest
+      </p>
+      <h1 class="mt-4 font-bold text-2xl text-accent">
+        Texas-Style Barbecue in Ridgefield CT
+      </h1>
+      <p class="mt-4 text-lg text-white leading-relaxed">
+        When we opened our doors in 2015 we didn’t know what to expect. After
+        all, Connecticut isn’t exactly recognized for its barbecue scene. We
+        created a barbecue style that we like to call Outlaw Barbecue.
+        Inspiration from areas like Texas fused with our own style has created
+        Barbecue like no other.
+      </p>
+    </div>
+  </section>
+  <section class="px-edge py-10 min-h-[650px] lg:py-20 relative">
+    <Image
+      class="absolute h-full w-full inset-0 object-cover object-right"
+      src={bbqLights}
+      alt="hoodoo brown building"
+      quality={100}
+      loading="eager"
+    />
+    <div
+      class="relative max-w-screen-2xl mx-auto text-center lg:text-left z-10"
+    >
+      <div class="max-w-2xl">
+        <p class="font-bebas text-2xl text-accent">Our Story</p>
+        <h2 class="mt-4 font-bold text-5xl text-white">
+          Hoodoo Brown was the baddest Cowboy of them all
+        </h2>
+        <div class="mt-4 space-y-4 text-lg text-white leading-relaxed">
+          <p class="italic">
+            A bank robber, cattle herder, Justice of the Peace, moonshiner, and
+            cook, Hoodoo Brown epitomized life in the Wild West. We celebrate
+            Hoodoo Brown's spirit and authenticity by cooking the best Texas
+            Outlaw barbecue on the planet...or at least right here in
+            Ridgefield.
+          </p>
+          <p>
+            Owner Cody Sperry was inspired several years ago on a "guys’ trip"
+            to Austin, Texas. There they traveled to over a dozen barbecue
+            joints, with owners generously sharing their stories, secrets, and
+            passion for creating true Texas barbecue. He returned to Ridgefield
+            with a new outlook and desire to replicate what he experienced in
+            Texas.
+          </p>
+          <p>
+            He started his apprenticeship on a Big Green Egg smoker and
+            eventually opened a barbecue catering business. Through the
+            encouragement of his customers, friends, and family, he decided to
+            open Hoodoo Brown BBQ.
+          </p>
+          <p>
+            This brings us to today, Hoodoo Brown Barbeque opened on May 22nd,
+            2015 and we are happy to bring our style of outlaw barbecue to the
+            Northeast. Hoo's Hungry?
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>
