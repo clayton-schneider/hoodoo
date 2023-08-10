@@ -1,37 +1,38 @@
 ---
-import { getEntries, getEntry } from "astro:content";
 import { Image } from "astro:assets";
 
-import codySperry from "~/assets/pages/about/team/cody-sperry.png";
+import foodAndWineMag from "~/assets/press/food-and-wine-mag.jpg"
+import ridgefieldPress from "~/assets/press/ridgefield-press.jpg"
+import texasMonthly from "~/assets/press/texas-monthly.jpg"
 
 const featuredPress = [
   {
-    title: "The Best Barbecue In CT",
+    title: "Hoodoo Brown - The Best Barbecue In Every State",
     date: "August 24th, 2022",
     source: "Food & Wine Magazine",
-    link: "https://www.gooogle.com",
+    link: "https://www.foodandwine.com/travel/best-bbq-restaurants",
     img: {
-      src: codySperry,
+      src: foodAndWineMag,
       alt: "cody sperry of hoodoo brown",
     },
   },
   {
-    title: "The Best Barbecue In CT",
-    date: "August 24th, 2022",
-    source: "Food & Wine Magazine",
-    link: "https://www.gooogle.com",
+    title: "Hoodoo Brown Outlaw Barbecue Attracts the Masses in Ridgefield",
+    date: "July 9th, 2015",
+    source: "The Ridgefield Press",
+    link: "https://www.theridgefieldpress.com/connecticutmagazine/food-drink/article/Hoodoo-Brown-Outlaw-Barbecue-Attracts-the-Masses-17041930.php",
     img: {
-      src: codySperry,
+      src: ridgefieldPress,
       alt: "cody sperry of hoodoo brown",
     },
   },
   {
-    title: "The Best Barbecue In CT",
-    date: "August 24th, 2022",
-    source: "Food & Wine Magazine",
-    link: "https://www.gooogle.com",
+    title: "Barbecue on Acid",
+    date: "August 10th, 2017",
+    source: "Texas Monthly",
+    link: "https://www.texasmonthly.com/bbq/barbecue-on-acid/",
     img: {
-      src: codySperry,
+      src: texasMonthly,
       alt: "cody sperry of hoodoo brown",
     },
   },
@@ -44,26 +45,31 @@ const featuredPress = [
       <h2 class="font-bebas text-white text-5xl">Featured Press Articles</h2>
     </div>
     <div
-      class="mt-10 flex flex-col lg:flex-row gap-10 items-center justify-between"
+      class="mt-10 flex flex-col lg:flex-row gap-10 items-center lg:items-stretch justify-between"
     >
       {
         featuredPress.map((article) => (
-          <div class="relative w-full max-w-[350px]">
+          <div class="w-full max-w-[350px] flex flex-col justify-between">
+            <div>
             <Image
-              class="w-full max-h-[200px] object-cover"
+              class="w-full max-h-[200px] object-cover "
               src={article.img.src}
               alt={article.img.alt}
             />
-            <div class="mt-4">
-              <p class="font-bebas text-3xl text-white">{article.title}</p>
-              <p class="mt-2 text-white">{article.date}</p>
+              <p class="mt-4 font-bebas text-3xl text-white">{article.title}</p>
+            </div>
+            <div>
+               <p class="mt-2 text-white">{article.date}</p>
               <p class="mt-2 font-bold text-accent">{article.source}</p>
               <a
                 href={article.link}
+                target="_blank"
                 class="mt-2 py-4 px-8 border border-cta text-white font-bold text-lg text-center block"
               >
                 Read The Article
               </a>
+              </div>
+             
             </div>
           </div>
         ))
