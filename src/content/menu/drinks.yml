@@ -1,0 +1,52 @@
+name: Drinks
+categories:
+  - name: Craft Cocktails
+    items:
+      - name: Front Porch Iced Tea
+        description: Bird Dog Peach Whiskey, Ol' Smokey Peach Moonshine, fresh homemade peach sweet tea
+      - name: Annie Oakley
+        description: Enrico Prosecco, Deep Eddys Grapefruit Vodka
+      - name: Smoked Old Fashioned
+        description: Moonshine soaked cherries muddled with orange, smoked ice cube and four roses Bourbon
+      - name: I'm Your Huckleberry Lemonade
+        description: 44 North Huckleberry Vodka, fresh lemon, lemonade, topped with raspberry liqueur.
+      - name: Ol' Smokey Sangria
+        description: Ol' Smokey Apple Pie and Strawberry Moonshine, Three Thieves Cabernet, mixed fruit.
+      - name: "'Merica Mule"
+        description: Titos Vodka, Ginger Beer, and Lime Juice.
+      - name: Old Texas Margarita
+        description: Herradurra Silver Tequila, Triple Sec, fresh jalapeno, honey.
+  - name: Domestic Beer
+    items:
+      - name: Budweiser
+      - name: Pabst Blue Ribbon
+      - name: Captain Lawrence Hop Commander
+      - name: Bud Light
+      - name: Blue Moon
+      - name: Two Roads Honey Spot Road White IPA
+      - name: Coors Light
+      - name: Lonestar
+      - name: Miller High Life
+      - name: Michelob Ultra
+  - name: Imported Beer
+    items:
+      - name: Heineken
+      - name: Palm Belgiam Amber Ale
+      - name: Corona Light
+      - name: Stella Artois
+      - name: Corona
+      - name: Guinnes
+  - name: White Wines
+    items:
+      - name: Three Thieves Chardonnay
+      - name: Buehler White Zinfandel
+      - name: Estancia Chardonnay
+      - name: Three Thieves Pinot Grigio
+      - name: Benzinger Sauvignon Blanc
+      - name: Enrico Prosecco
+  - name: Red Wines
+    items:
+      - name: Three Thieves Cabernet
+      - name: Ruta 22 Malbec
+      - name: Three Thieves Pinot Noir
+      - name: Josh Cabernet

@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+import heroImage from "~/assets/pages/menu/food-and-drink-menu.png";
+
+import { getEntry } from "astro:content";
+const foodMenu = await getEntry("menu", "food");
+const drinkMenu = await getEntry("menu", "drinks");
+
+import Layout from "../layouts/Layout.astro";
+import MenuBuilder from "@components/MenuBuilder.astro";
+---
+
+<Layout
+  seo={{
+    title: "Menu | Hoodoo Brown",
+    description: "Check out Hoodoo Brown BBQ's food and drink menu.",
+  }}
+>
+  <section class="relative px-edge py-40">
+    <Image
+      class="w-full h-full absolute inset-0 object-cover"
+      src={heroImage}
+      alt="bbq food platter"
+    />
+    <div class="relative">
+      <h1 class="text-white font-bold text-7xl text-center">
+        Food and Drink Menu
+      </h1>
+    </div>
+  </section>
+
+  <section class="bg-bg-light px-edge py-10 lg:py-20">
+    <div class="max-w-screen-lg mx-auto">
+      <MenuBuilder menus={[foodMenu, drinkMenu]} />
+    </div>
+  </section>
+</Layout>

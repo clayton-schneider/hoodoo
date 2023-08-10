@@ -1,0 +1,38 @@
+---
+import type { CollectionEntry } from "astro:content";
+export interface Props {
+  menus: CollectionEntry<"menu">[];
+}
+const { menus } = Astro.props;
+---
+
+<div class="space-y-20">
+  {
+    menus.map((menu) => (
+      <div>
+        <p class="font-bold text-center text-5xl">{menu.data.name} Menu</p>
+        {menu.data.categories.map((category) => (
+          <div class="mt-10 space-y-10">
+            <h4 class="uppercase tracking-wider font-bebas text-cta text-xl text-center">
+              {category.name}
+            </h4>
+            <div class="mt-5 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {category.items.map((item) => (
+                <div>
+                  <div class="flex justify-between">
+                    <p class="font-bold">{item.name}</p>
+                    {item.price && <p>{item.price}</p>}
+                  </div>
+                  {item.description && <p>{item.description}</p>}
+                  {item.note && <p class="text-sm italic">{item.note}</p>}
+
+                  <p />
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    ))
+  }
+</div>

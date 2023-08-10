@@ -1,0 +1,108 @@
+name: Food
+categories:
+  - name: Appetizers
+    items:
+      - name: BBQ Nachos
+        price: Small $14 Large $21
+        description: Chopped brisket or pork, pit beans, jalapeños and our
+          signature cheese sauce over chips with fresh guacamole
+          and sour cream on side.
+      - name: Texas Poutine
+        price: $16
+        description: Hand cut fries, gravy brisket debris and cheese curds
+      - name: Fried Green Tomatoes.
+        price: $15
+        description: Served with a BBQ Ranch Dipping Sauce
+      - name: Smoked Chicken Wings
+        price: Six for $12 Twelve for $22
+        description: "Choice of sauce: Buffalo, BBQ, Garlic Parmesan, RyThai, or Naked."
+      - name: Jar of Bacon
+        price: $13
+  - name: Salads
+    items:
+      - name: Blackened Chicken Caesar
+        price: $16
+        description: Blackened Chicken, Romaine lettuce, croutons & parmesan
+        note: Sub turkey or pulled pork at no cost |
+          Brisket $5 | Pork Belly $5
+      - name: Smoked Cobb Salad
+        price: $21
+        description: Pork Belly, Turkey, Avocado, Gorgonzola, Hard Boiled Egg, Tomato over Mixed Greens
+  - name: Southern Classics
+    items:
+      - name: Fried Chicken and Cornbread Waffles
+        price: $17
+        description: Served with maple syrup and choice of side.
+  - name: The Gangs All Here
+    items:
+      - name: Holy Texas Trinity
+        price: $105
+        description: 1 pound of brisket, two links of jalapeño cheddar sausage, a full rack of pork ribs and two pieces of cornbread.
+        note: Serves 4-6
+      - name: Table Breaker
+        price: $205
+        description: 1 beef rib, 2 halves of chicken, full rack of pork ribs, choice of 1 lb of two meats, and cornbread
+        note: Serves 8-10
+  - name: Sandwiches
+    description: All sandwiches served with choice of side.
+    items:
+      - name: The Battle of Ridgefield
+        price: $19
+        description: Brisket, crispy pork belly, apple vinegar slaw.
+      - name: HOGZILLA
+        price: $19
+        description: Shaved Pork Ribs, Pulled Pork, Pork Belly, Hoodoo Voodoo Sauce, & Fried Green Tomato.
+      - name: Hoodoo Brown
+        price: $17 / $16 / $16
+        description: Create your own BBQ sandwich. Your choice of brisket, pulled pork or sliced turkey.
+      - name: Bat Masterson
+        price: $16
+        description: Handbreaded Fried Buffalo Chicken Sandwich w/ a Blue Cheese Slaw
+      - name: Brisket Grilled Cheese
+        price: $18
+  - name: Sides
+    items:
+      - name: Mac & Cheese
+        price: $6 / $11
+      - name: Collard Greens
+        price: $6 / $11
+      - name: Sweet & Spicy Brussel Sprouts
+        price: $8 / $14
+      - name: Pit Beans
+        price: $6 / $11
+      - name: Sweet Potato Fries
+        price: $7
+      - name: Interstellar Potatoes
+        price: $8 / $14
+      - name: Apple Vinegar Slaw
+        price: $6 / $11
+      - name: Seasoned Fries
+        price: $7
+      - name: Corn Bread
+        price: $5 a piece
+      - name: Potato Salad
+        price: $6 / $11
+  - name: Kids Menu
+    items:
+      - name: 3 Chicken Fingers with Fries
+        price: $12
+  - name: Dessert
+    items:
+      - name: Carmalita Sunday
+        price: $10
+        description: Mason jar filled with chunks of Carmelita's, vanilla ice cream and hot fudge.
+      - name: Toll House Pie
+        price: $10
+        description: Brown sugar and chocolate morsel pie, chocolate sauce.
+      - name: Chocolate Chip Bread Pudding
+        price: $10
+        description: Served with a salted caramel glaze.
+      - name: Banana Bourbon Cream Pie
+        price: $10
+        description: Nilla wafer crust, banana bourbon pudding, banana slices and whipped cream.
+      - name: Fried Oreos
+        price: $10
+        description: Double stuffed Oreos in a funnel cake batter, served with Ice Cream.
+      - name: S'mores Ice Cream Cake
+        price: $10
+        description: Graham cracker crust, Smores Ice Cream, Chocolate swirl, fluff icing, toasted marshmallows.
