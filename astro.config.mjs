@@ -7,9 +7,6 @@ import react from "@astrojs/react";
 import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
-import partytown from "@astrojs/partytown";
-
-// https://astro.build/config
 export default defineConfig({
   experimental: {
     assets: true,
