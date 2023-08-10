@@ -21,6 +21,20 @@ const menuCollection = defineCollection({
   }),
 });
 
+const pressCollection = defineCollection({
+  type: "data",
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      source: z.string(),
+      date: z.string(),
+      img: image(),
+      imgAlt: z.string(),
+      featured: z.boolean().optional(),
+    }),
+});
+
 export const collections = {
   menu: menuCollection,
+  test: pressCollection,
 };

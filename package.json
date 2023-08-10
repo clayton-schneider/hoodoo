@@ -11,13 +11,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/image": "^0.17.3",
     "@astrojs/react": "^2.2.1",
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^4.0.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "astro": "^2.9.3",
+    "astro": "^2.10.5",
     "astro-google-fonts-optimizer": "^0.2.2",
     "astro-icon": "^0.8.0",
     "astro-robots-txt": "^0.5.0",
