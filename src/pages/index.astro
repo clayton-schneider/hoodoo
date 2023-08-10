@@ -2,8 +2,11 @@
 import InstagramFeed from "@sections/globals/InstagramFeed.astro";
 import FeaturedPress from "@sections/press/FeaturedPress.astro";
 import Layout from "../layouts/Layout.astro";
+
 import { Image } from "astro:assets";
 import homeHero from "~/assets/pages/home/home-hero.png";
+import dineIn from "~/assets/pages/home/home-dine-in.png";
+import caterImg from "~/assets/pages/home/home-catering.png";
 ---
 
 <Layout
@@ -39,5 +42,55 @@ import homeHero from "~/assets/pages/home/home-hero.png";
   </section>
 
   <InstagramFeed />
+
+  <section class="px-edge py-20 lg:py-40 relative">
+    <Image
+      class="absolute w-full h-full inset-0 object-cover"
+      src={dineIn}
+      alt="hoodoo brown bbq"
+    />
+    <div class="relative max-w-screen-2xl mx-auto text-center text-white">
+      <h2 class="font-bebas text-7xl text-accent">Dine In With Hoodoo Brown</h2>
+
+      <p class="text-white text-xl leading-relaxed max-w-2xl mx-auto">
+        Pull up a seat at the bar or book the back room. Whatever the occasion
+        may be we look forward to serving you. Our Old West decor will put you
+        in the right mood to eat some good BBQ.
+      </p>
+      <p class="italic">
+        Only parties 10+ may reserve the back room. Parties may use the table
+        for 2 hours. Thank you.
+      </p>
+
+      <a
+        class="mt-5 inline-block text-white font-bold border-2 border-cta transition-all duration-300 hover:bg-transparent bg-cta px-8 py-4"
+        href="/menu"
+      >
+        View The Menu</a
+      >
+    </div>
+  </section>
   <FeaturedPress />
+  <section class="px-edge py-20 lg:py-40 relative">
+    <Image
+      class="absolute w-full h-full inset-0 object-cover"
+      src={caterImg}
+      alt="hoodoo brown bbq"
+    />
+    <div class="relative max-w-screen-2xl mx-auto text-center text-white">
+      <h2 class="font-bebas text-7xl text-accent">We Doo Parties!</h2>
+
+      <p class="text-white text-xl leading-relaxed max-w-2xl mx-auto">
+        Make your next party or event one to remember with Hoodoo Brown BBQ
+        Catering. From large events to Carolina Pig Roasts we do it all.
+      </p>
+
+      <a
+        class="mt-5 inline-block text-white font-bold border-2 border-cta transition-all duration-300 hover:bg-transparent bg-cta px-8 py-4"
+        href="/catering"
+      >
+        Book Your Next Event</a
+      >
+    </div>
+  </section>
 </Layout>
