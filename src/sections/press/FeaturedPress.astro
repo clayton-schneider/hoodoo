@@ -37,12 +37,22 @@ const featuredPress = [
     },
   },
 ];
+export interface Props {
+  dark?: boolean;
+}
+const { dark = false } = Astro.props;
 ---
 
-<section class="bg-primary-lighter px-edge py-10 lg:py-20 relative">
+<section
+  class=`${dark ? "bg-primary-lighter" : 'bg-bg-light'} px-edge py-10 lg:py-20 relative`
+>
   <div class="max-w-screen-2xl mx-auto">
     <div class="text-center max-w-xl mx-auto">
-      <h2 class="font-bebas text-white text-5xl">Featured Press Articles</h2>
+      <h2
+        class=`${dark ? "text-white" : "text-primary-darker"} font-bebas text-cta  text-5xl`
+      >
+        Featured Press Articles
+      </h2>
     </div>
     <div
       class="mt-10 flex flex-col lg:flex-row gap-10 items-center lg:items-stretch justify-between"
@@ -57,15 +67,25 @@ const featuredPress = [
                 src={article.img.src}
                 alt={article.img.alt}
               />
-              <p class="mt-4 font-bebas text-3xl text-white">{article.title}</p>
+              <p
+                class={`${
+                  dark ? "text-white" : "text-primary"
+                } mt-4 font-bebas text-3xl`}
+              >
+                {article.title}
+              </p>
             </div>
             <div>
-              <p class="mt-2 text-white">{article.date}</p>
-              <p class="mt-2 font-bold text-accent">{article.source}</p>
+              <p class={`${dark ? "text-white" : ""} mt-2`}>{article.date}</p>
+              <p class={`${dark ? "text-accent" : ""} mt-2 font-bold `}>
+                {article.source}
+              </p>
               <a
                 href={article.link}
                 target="_blank"
-                class="mt-2 py-4 px-8 border border-cta text-white font-bold text-lg text-center block"
+                class={`${
+                  dark ? "border-cta" : "border-primary bg-primary  "
+                } text-white mt-2 py-4 px-8 border font-bold text-lg text-center block`}
               >
                 Read The Article
               </a>
