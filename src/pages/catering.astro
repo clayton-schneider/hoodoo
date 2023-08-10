@@ -1,0 +1,202 @@
+---
+import { Image } from "astro:assets";
+import cateringHero from "~/assets/catering.png";
+import pigRoastImg from "~/assets/pages/catering/carolina-pig-roast.png";
+
+const smallPartyMenu = [
+  {
+    name: "Wings",
+    description:
+      "Choose from BBQ, Buffalo, RyThai, Chipotle Honey, Garlic Parmesan or Rajun Cajun",
+    prices: ["24 for $44", "50 for $81", "100 for $150"],
+  },
+  {
+    name: "brisket",
+    prices: [
+      "Half Tray = 5 lbs (feeds 10+ people) $170",
+      "Full Tray = 10 lbs (feeds 20+ people) $340",
+    ],
+  },
+  {
+    name: "Trays of Sides",
+    description:
+      "Choice of, Collard Greens, Pit Beans, Mac and Cheese, Potato Salad, or Apple Vinegar Slaw",
+    prices: [
+      "Half Tray (feeds 15+ people) $100",
+      "Full Tray (feeds 25+ people) $180",
+    ],
+  },
+  {
+    name: "Cornbread",
+    prices: ["Half Tray $25", "Full Tray $50"],
+  },
+];
+
+import Layout from "src/layouts/Layout.astro";
+import ContactForm from "@components/Forms/ContactForm";
+const fields = [
+  { fieldType: "text", id: "first", name: "First Name" },
+  { fieldType: "text", id: "last", name: "Last Name" },
+  { fieldType: "email", id: "email", name: "Email Address" },
+  { fieldType: "tel", id: "phone", name: "Phone Number" },
+  { fieldType: "number", id: "guests", name: "Number of Guests?" },
+  { fieldType: "date", id: "date", name: "Date of Event?" },
+  { fieldType: "textarea", id: "requests", name: "Menu Requests" },
+];
+---
+
+<Layout
+  seo={{ title: "Catering | Hoodoo Brown", description: "Thisiisidescription" }}
+>
+  <section class="px-edge py-20 lg:py-40 relative">
+    <Image
+      class="absolute inset-0 h-full object-cover"
+      quality={100}
+      loading="eager"
+      src={cateringHero}
+      alt="hogzilla sandwich"
+    />
+    <div class="text-white relative z-10 text-center">
+      <h1 class="font-bebas font-bold text-7xl">Hoodoo Brown BBQ Catering</h1>
+    </div>
+  </section>
+
+  <section class="bg-bg-light px-edge py-10 lg:py-20 relative">
+    <div class="max-w-screen-2xl mx-auto text-center">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="font-bebas text-5xl font-bold text-cta">
+          Plan Your Perfect Party!
+        </h2>
+        <p class="mt-2 text-lg">
+          Have Hoodoo Brown BBQ cater your next party! Take a look at how we
+          organize our catering and then click the button to fill out the form
+          to request catering.
+        </p>
+      </div>
+
+      <div
+        class="mt-10 flex flex-col lg:flex-row items-center lg:items-start justify-center"
+      >
+        <div class="w-full max-w-sm">
+          <p class="font-bold text-lg">Step#1: Choose Your Meat</p>
+          <p class="mt-2">Pick 2-3 meats</p>
+          <ul class="mt-2 space-y-1">
+            <li>Brisket</li>
+            <li>Pulled Pork</li>
+            <li>Chicken</li>
+            <li>Turkey</li>
+            <li>Pork Ribs</li>
+            <li>Jalepeno Cheddar Sausage</li>
+          </ul>
+        </div>
+        <div class="w-full max-w-sm">
+          <p class="font-bold text-lg">Step#2: Choose Your Sides</p>
+          <p class="mt-2">Pick 2-3 Sides</p>
+          <ul class="mt-2 space-y-1">
+            <li>Potato Salad</li><li>Apple Vinegar Slaw</li>
+            <li>Pit Beans</li>
+            <li>Mac and Cheese</li>
+            <li>Collard Greens</li>
+            <li>Cornbread</li>
+          </ul>
+        </div>
+        <div class="w-full max-w-sm">
+          <p class="font-bold text-lg">Step#3: Customize</p>
+          <p class="mt-2 leading-relaxed">
+            It's your party and we want you to be happy! Don't let the previous
+            steps limit you. Need more people? How about everything on the menu?
+            We will work with you to make the party fit your needs.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-10">
+        <p class="font-bold text-3xl">Looking For A Smaller Party?</p>
+        <p class="mt-2">
+          Here are a couple flate rate prices on some of our favorite items.
+        </p>
+        <div
+          class="mt-5 max-w-screen-lg mx-auto grid gap-10 md:grid-cols-2 lg:grid-cols-3"
+        >
+          {
+            smallPartyMenu.map((item) => (
+              <div class="text-left ">
+                <p class="font-bebas tracking-wider text-xl font-bold">
+                  {item.name}
+                </p>
+                {item.description && <p>{item.description}</p>}
+                <div class="mt-2">
+                  {item.prices && item.prices.map((price) => <p>{price}</p>)}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <a
+        class="mt-5 py-4 px-8 text-white text-lg font-bold bg-cta inline-block"
+        href="#form">Request Hoodoo Catering</a
+      >
+    </div>
+  </section>
+  <section class="bg-bg-light px-edge py-10 lg:py-20 relative">
+    <div class="relative z-10">
+      <div class="max-w-2xl mx-auto text-center grow shrink-0">
+        <h2 class="font-bebas font-bold text-5xl text-cta">
+          We Now Offer Carolina Style Pig Roasts!
+        </h2>
+        <p class="mt-2 leading-relaxed text-large">
+          We bring it all, the pig, the smoker one of our pit masters, and we
+          cook the whole hog for your friends, families, coworkers, neighbors
+          whomever! We cook your whole hog on our brand new BQ Grill, over fresh
+          hot coals. This is something you can't get anywhere else! Minimum 50
+          People: We Bring the Pig, Sauce, Coleslaw, Buns and Corn Bread. Costs
+          Starts at $3000, for the first fifty people, and goes up $20 with each
+          additional guest. Ask about adding more items to your Authentic
+          Carolina Style Pig Roast!
+        </p>
+
+        <a
+          class="mt-2 py-4 px-8 text-white text-lg font-bold bg-cta block"
+          href="#form">Request Hoodoo Catering</a
+        >
+      </div><Image
+        class="mt-5"
+        src={pigRoastImg}
+        alt="hoodoo brown carolina pig roast"
+      />
+    </div>
+  </section>
+
+  <section id="form" class="bg-primary-lighter px-edge py-10">
+    <div
+      class="max-w-screen-2xl mx-auto text-white flex gap-5 flex-col lg:flex-row items-center lg:items-start justify-between"
+    >
+      <div class="max-w-2xl text-center lg:text-left">
+        <h2 class="font-bold font-bebas text-5xl text-accent">
+          Are You Ready To Party?
+        </h2>
+        <p class="leading-relaxed">
+          Fill out this form to enquire about Hoodoo Brown BBQ catering your
+          next party! Have a question? Feel free to email us at <a
+            href="mailto:catering@hoodoobrownbbq.com"
+            class="font-bold text-accent">catering@hoodoobrownbbq.com</a
+          >
+          or give us a call at <a
+            class="font-bold text-accent"
+            href="tel:203-438-6033">203-438-6033</a
+          >.
+        </p>
+      </div>
+      <div class="w-full text-black [&_label]:text-white">
+        <ContactForm
+          client:load
+          name="Hoodoo Brown Catering Form"
+          message="Thank you for submitting this contact form. We will reach out to you shortly."
+          error="There was an error submitting this form. Please refresh and try again. If the problem persists, please send us an email directly."
+          fields={fields}
+        />
+      </div>
+    </div>
+  </section>
+</Layout>
