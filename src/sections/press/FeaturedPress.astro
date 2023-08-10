@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
 
-import foodAndWineMag from "~/assets/press/food-and-wine-mag.jpg"
-import ridgefieldPress from "~/assets/press/ridgefield-press.jpg"
-import texasMonthly from "~/assets/press/texas-monthly.jpg"
+import foodAndWineMag from "~/assets/press/food-and-wine-mag.jpg";
+import ridgefieldPress from "~/assets/press/ridgefield-press.jpg";
+import texasMonthly from "~/assets/press/texas-monthly.jpg";
 
 const featuredPress = [
   {
@@ -51,15 +51,16 @@ const featuredPress = [
         featuredPress.map((article) => (
           <div class="w-full max-w-[350px] flex flex-col justify-between">
             <div>
-            <Image
-              class="w-full max-h-[200px] object-cover "
-              src={article.img.src}
-              alt={article.img.alt}
-            />
+              <Image
+                width={350}
+                class="w-full max-h-[200px] object-cover "
+                src={article.img.src}
+                alt={article.img.alt}
+              />
               <p class="mt-4 font-bebas text-3xl text-white">{article.title}</p>
             </div>
             <div>
-               <p class="mt-2 text-white">{article.date}</p>
+              <p class="mt-2 text-white">{article.date}</p>
               <p class="mt-2 font-bold text-accent">{article.source}</p>
               <a
                 href={article.link}
@@ -68,8 +69,6 @@ const featuredPress = [
               >
                 Read The Article
               </a>
-              </div>
-             
             </div>
           </div>
         ))

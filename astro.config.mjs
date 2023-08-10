@@ -1,31 +1,31 @@
 import { defineConfig, sharpImageService } from "astro/config";
-
 import tailwind from "@astrojs/tailwind";
 
-// https://astro.build/config
 import react from "@astrojs/react";
 
 // https://astro.build/config
 import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
+import partytown from "@astrojs/partytown";
+
+// https://astro.build/config
 export default defineConfig({
   experimental: {
-    assets: true,
+    assets: true
   },
   site: "https://www.sitegoeshere.com",
   image: {
-    service: sharpImageService(),
+    service: sharpImageService()
   },
-  integrations: [
-    tailwind({
-      config: {
-        applyBaseStyles: false,
-      },
-    }),
-    react(),
-    robotsTxt({
-      policy: [{ userAgent: "*", disallow: "/assets/*" }],
-    }),
-  ],
+  integrations: [tailwind({
+    config: {
+      applyBaseStyles: false
+    }
+  }), react(), robotsTxt({
+    policy: [{
+      userAgent: "*",
+      disallow: "/assets/*"
+    }]
+  }), partytown()]
 });
