@@ -12,20 +12,26 @@ import partytown from "@astrojs/partytown";
 // https://astro.build/config
 export default defineConfig({
   experimental: {
-    assets: true
+    assets: true,
   },
   site: "https://www.sitegoeshere.com",
   image: {
-    service: sharpImageService()
+    service: sharpImageService(),
   },
-  integrations: [tailwind({
-    config: {
-      applyBaseStyles: false
-    }
-  }), react(), robotsTxt({
-    policy: [{
-      userAgent: "*",
-      disallow: "/assets/*"
-    }]
-  }), partytown()]
+  integrations: [
+    tailwind({
+      config: {
+        applyBaseStyles: false,
+      },
+    }),
+    react(),
+    robotsTxt({
+      policy: [
+        {
+          userAgent: "*",
+          disallow: "/assets/*",
+        },
+      ],
+    }),
+  ],
 });
