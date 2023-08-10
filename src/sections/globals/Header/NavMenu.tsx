@@ -58,6 +58,7 @@ const NavMenu = ({ links }: Props) => {
         })}
         <li className="!block lg:w-auto lg:bg-transparent w-full bg-cta px-2 py-4">
           <a
+            target="_blank"
             href="https://order.toasttab.com/online/hoodoobrownbbq"
             className="block w-full text-white lg:text-accent text-center lg:text-left lg:w-auto"
           >

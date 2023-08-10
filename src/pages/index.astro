@@ -1,6 +1,9 @@
 ---
+import InstagramFeed from "@sections/globals/InstagramFeed.astro";
+import FeaturedPress from "@sections/press/FeaturedPress.astro";
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
+import homeHero from "~/assets/pages/home/home-hero.png";
 ---
 
 <Layout
@@ -9,9 +12,30 @@ import { Image } from "astro:assets";
     description: "The starter template for all Simply Sprout websites.",
   }}
 >
-  <section class="px-edge py-10 lg:py-20">
-    <div class="max-w-screen-xl mx-auto">
-      <h1>Hi</h1>
+  <section class="px-edge py-20 lg:py-40 relative">
+    <Image
+      class="absolute w-full h-full inset-0 object-cover"
+      src={homeHero}
+      alt="hoodoo brown bbq"
+    />
+    <div class="relative max-w-screen-2xl mx-auto text-center">
+      <h1 class="font-bebas text-7xl text-accent">Hoodoo Brown BBQ</h1>
+
+      <p class="font-bold text-white text-xl">Texas-Style Outlaw Barbecue</p>
+      <p class="text-white text-xl leading-relaxed max-w-2xl mx-auto">
+        Slow cooked barbecue ready for you to dine in, takeout, or feed a party.
+      </p>
+
+      <a
+        class="mt-5 inline-block text-white font-bold border-2 border-cta transition-all duration-300 hover:bg-transparent bg-cta px-8 py-4"
+        target="_blank"
+        href="https://order.toasttab.com/online/hoodoobrownbbq"
+      >
+        Place Online Order</a
+      >
     </div>
   </section>
+
+  <InstagramFeed />
+  <FeaturedPress />
 </Layout>
