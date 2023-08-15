@@ -31,4 +31,9 @@ export default defineConfig({
       ],
     }),
   ],
+  vite: {
+    ssr: {
+      noExternal: ["@splidejs/splide"],
+    },
+  },
 });

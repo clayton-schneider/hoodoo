@@ -7,6 +7,7 @@ import { Image } from "astro:assets";
 import homeHero from "~/assets/pages/home/home-hero.png";
 import dineIn from "~/assets/pages/home/home-dine-in.png";
 import caterImg from "~/assets/pages/home/home-catering.png";
+import FullSlider from "@components/FullSlider.astro";
 ---
 
 <Layout
@@ -72,6 +73,7 @@ import caterImg from "~/assets/pages/home/home-catering.png";
   </section>
   <div class="dark">
     <FeaturedPress />
+    <FullSlider label="bbq image gallery" />
   </div>
   <section class="px-edge py-20 lg:py-40 relative">
     <Image

@@ -1,0 +1,72 @@
+---
+import { Image } from "astro:assets";
+import bbqPlatter from "~/assets/pages/home/gallery/bbq-platter.jpg";
+import bbqPorkBelly from "~/assets/pages/home/gallery/bbq-pork-belly.jpg";
+import bbqPoutine from "~/assets/pages/home/gallery/bbq-poutine.jpg";
+import bbqRoom from "~/assets/pages/home/gallery/bbq-room.jpg";
+import bbqSlider from "~/assets/pages/home/gallery/bbq-slider.jpeg";
+import brisketPlatter from "~/assets/pages/home/gallery/brisket-platter.jpeg";
+import corn from "~/assets/pages/home/gallery/corn.jpg";
+import dessert from "~/assets/pages/home/gallery/dessert.jpg";
+import hoodooTap from "~/assets/pages/home/gallery/hoodoo-tap.jpg";
+import moonshine from "~/assets/pages/home/gallery/moonshine.jpg";
+import porkBelly from "~/assets/pages/home/gallery/pork-belly-sandwhich.jpeg";
+
+const imgs = [
+  { src: bbqPlatter, alt: "bbq platter" },
+  { src: bbqPorkBelly, alt: "bbq pork belly" },
+  { src: bbqPoutine, alt: "bbq poutine" },
+  { src: bbqRoom, alt: "bbq room" },
+  { src: bbqSlider, alt: "bbq slider" },
+  { src: brisketPlatter, alt: "brisket platter" },
+  { src: corn, alt: "street corn" },
+  { src: dessert, alt: "hoodoo brown dessert" },
+  { src: hoodooTap, alt: "hoodoo brown beer on tap" },
+  { src: moonshine, alt: "hoodoo brown moonshine" },
+  { src: porkBelly, alt: "hoodoo brown pork belly sandwhich" },
+];
+
+export interface Props {
+  label: string;
+}
+
+const { label } = Astro.props;
+---
+
+<section class="splide" aria-label={label}>
+  <div class="splide__track">
+    <ul class="splide__list">
+      {
+        imgs.map((img) => (
+          <Image
+            width={1920}
+            quality={100}
+            class="splide__slide w-full h-[600px] object-cover"
+            src={img.src}
+            alt={img.alt}
+          />
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<script>
+  import Splide from "@splidejs/splide";
+  import "@splidejs/splide/css/core";
+
+  new Splide(".splide", {
+    lazyLoad: true,
+    autoplay: true,
+    interval: 3000,
+    type: "loop",
+    perPage: 1,
+    perMove: 1,
+    classes: {
+      arrow: "hidden",
+      pagination:
+        "absolute left-1/2 bottom-5 -translate-x-1/2 flex justify-center mt-2 space-x-1 [&>li]:flex [&>li]:items-center h-[14px]",
+      page: "w-3 h-3 bg-gray-100/20  rounded-full transition-all duration-300 [&.is-active]:bg-accent  [&.is-active]:w-[14px] [&.is-active]:h-[14px]",
+    },
+  }).mount();
+</script>
